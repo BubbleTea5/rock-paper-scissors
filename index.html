@@ -1,10 +1,100 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Rock, Paper, Scissors</title>
-    <meta charset="UTF-8"/>
-</head>
-<body>
-    <script src="main.js"></script>
-</body>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div id="projectName">
+        <p>Rock Paper Scissors</p>
+      </div>
+      <a href="https://github.com/BubbleTea5">
+        <div id="githubProfile">
+          <div id="profIcon">
+            <img
+              src="/rock-paper-scissors/images/profilepic.jpg"
+              alt="Profile picture"
+            />
+          </div>
+          <p id="profName">BubbleTea5</p>
+        </div>
+      </a>
+    </nav>
+    <div id="pickFirstHand">
+      <h1>CHOOSE YOUR HAND...</h1>
+    </div>
+    <div id="rules">
+      <img
+        id="helpIcon"
+        src="/rock-paper-scissors/images/help.png"
+        alt="Help"
+      />
+      <div id="tooltip">
+        <h2>HOW TO PLAY</h2>
+        <ul>
+          <li>ROCK</li>
+          <li>v</li>
+          <li>SCISSORS</li>
+          <li>v</li>
+          <li>PAPER</li>
+          <li>v</li>
+          <li>ROCK</li>
+        </ul>
+        <p id="upperText">FIRST PERSON TO REACH</p>
+        <p>5 POINTS WINS</p>
+      </div>
+    </div>
+    <div id="selectionBoxes">
+      <div id="winResult">
+        <p id="gameWin">YOU WIN!</p>
+        <button type="button" class="playAgain">PLAY AGAIN?</button>
+      </div>
+      <div id="loseResult">
+        <p id="gameLoss">YOU LOSE!</p>
+        <button type="button" class="playAgain">PLAY AGAIN?</button>
+      </div>
+      <div class="choiceDiv" id="rock">
+        <button type="button" class="choices" data-hand="rock">
+          <p class="buttonText">ROCK</p>
+        </button>
+      </div>
+      <div class="choiceDiv" id="paper">
+        <button type="button" class="choices" data-hand="paper">
+          <p class="buttonText">PAPER</p>
+        </button>
+      </div>
+      <div class="choiceDiv" id="scissors">
+        <button type="button" class="choices" data-hand="scissors">
+          <p class="buttonText">SCISSORS</p>
+        </button>
+      </div>
+    </div>
+    <footer>
+      <div class="scoreBox" id="userScore">
+        <p class="scoreLabel" id="userScoreLabel">PLAYER SCORE</p>
+        <p class="scoreNum" id="userScoreNum">0</p>
+      </div>
+      <table id="matchHistory">
+        <thead class="round" id="tableHeaders">
+          <th id="space"></th>
+          <th id="userChoice">PLAYER</th>
+          <th id="compChoice">COMPUTER</th>
+          <th id="roundWinLose">WIN/LOSS</th>
+        </thead>
+        <td colspan="4" id="innerCell">
+          <div id="innerDiv">
+            <table id="innerTable"></table>
+          </div>
+        </td>
+      </table>
+      <div class="scoreBox" id="compScore">
+        <p class="scoreLabel" id="compScoreLabel">COMPUTER SCORE</p>
+        <p class="scoreNum" id="compScoreNum">0</p>
+      </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
